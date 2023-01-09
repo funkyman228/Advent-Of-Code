@@ -16,5 +16,3 @@ for floori in range(len(hotel)):
 
 print('\n')
 print('awnser =', cfloor)
-if count > 2000:
-    print("lol")
