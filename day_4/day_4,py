@@ -1,0 +1,32 @@
+import hashlib
+
+# Create an MD5 hash object
+md5 = hashlib.md5()
+
+# Create a string to hash
+string = "ckczppom"
+hash_hex = ''
+first_five = ''
+num = -1
+
+while first_five != '000000':
+    num += 1
+    md5 = hashlib.md5()
+
+    comp = f'{string}{num}'
+
+    # Hash the string
+    md5.update(comp.encode())
+
+    # Get the hexadecimal representation of the hash
+    hash_hex = md5.hexdigest()
+    first_five = hash_hex[:6]
+
+    # Print the hash
+#    print(comp)
+#    print(hash_hex)
+
+
+print(f'\n{comp}')
+print(hash_hex)
+print(f'ans = {num}')
